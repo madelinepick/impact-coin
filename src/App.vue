@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ToDoList/>
+    <ToDoList v-bind:todos="todos"/>
   </div>
 </template>
 
@@ -11,6 +11,27 @@ export default {
   name: 'app',
   components: {
     ToDoList,
+  },
+  data() {
+    return {
+      todos: [{
+        title: 'Project Fi',
+        project: 'Communication',
+        done: false,
+      }, {
+        title: 'Clean Bike',
+        project: 'Sports',
+        done: true,
+      }, {
+        title: 'Run',
+        project: 'Sports',
+        done: false,
+      }, {
+        title: 'Paint',
+        project: 'House',
+        done: false,
+      }],
+    };
   },
 };
 </script>
